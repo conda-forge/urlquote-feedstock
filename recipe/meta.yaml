@@ -1,5 +1,5 @@
 {% set name = "urlquote" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4b3920f7e2653e05c92f3b1b11e8fe992e767884556d095ee82ee1a4c8213a46
+  sha256: 809d356ea660afe5ca57f33ebe659945dafeaa63f7bba25395b8f0663f5704a9
 
 build:
   number: 0
