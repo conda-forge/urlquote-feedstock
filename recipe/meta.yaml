@@ -1,5 +1,5 @@
 {% set name = "urlquote" %}
-{% set version = "1.1.4" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f501c939813330151620c06e78038a008af2e8404c41c0b42b30c44471c5427
+  sha256: 03479d99bd2e3ebc7763770cde1276f05f8687c8b8356c83d4095def58754b1d
 
 build:
-  number: 5
+  number: 0
 
 requirements:
   build:
+    - maturin >=0.13,<0.14                   # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
@@ -22,13 +23,12 @@ requirements:
     - {{ compiler("cxx") }}
   host:
     - python
-    - setuptools_scm
-    - milksnake
+    - cffi
+    - maturin >=0.13,<0.14
     - pip
   run:
     - python
-    - six
-    - milksnake
+    - cffi
 
 test:
   imports:
@@ -41,7 +41,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Fast percent encoding / decoding for python.'
+  summary: Fast percent encoding / decoding for python.
   description: |
     urlquote is not intended to be a replacement for urllib. urllib is part of the Python standard
     library and should be your go-to choice to quote and unquote URLs. However, should quoting or
