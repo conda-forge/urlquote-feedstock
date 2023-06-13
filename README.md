@@ -1,11 +1,11 @@
-About urlquote
-==============
+About urlquote-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/urlquote-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/blue-yonder/urlquote
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/urlquote-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fast percent encoding / decoding for python.
 
