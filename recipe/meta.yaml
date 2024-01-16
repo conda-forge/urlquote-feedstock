@@ -1,5 +1,5 @@
 {% set name = "urlquote" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 03479d99bd2e3ebc7763770cde1276f05f8687c8b8356c83d4095def58754b1d
+  sha256: aa8ae411b1694a05c87f013130bf8b163cfc383268700493d4c743061aca5770
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
